@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>罗罗♡的聊天室</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 轻柔风的菜单按钮 -->
+  <div class="menu" style="position: relative;">
+    <button class="menu-toggle">⋯</button>
+    <div class="dropdown">
+      <div class="dropdown-item" onclick="document.getElementById('bgInput').click()">更换背景图</div>
+      <div class="dropdown-item" id="commonPhrasesBtn">他常说的话</div>
+      <div class="dropdown-item" id="decisionBtn">yes or no</div>
+      <div class="dropdown-item" id="editRepliesBtn">修改语录</div>
+    </div>
+  </div>
+
+  <input type="file" id="bgInput" accept="image/*" style="display: none;" />
+
+  <div class="header">
+    <h1> 𝓇𝓇 & 𝒸𝒸 </h1>
+    <p id="loveDays">已经坠入爱河了 0 天</p>
+    <button id="moodButton">点击查看罗罗的心情</button>
+  </div>
+
+  <div class="chat-container">
+    <div class="chat-box" id="chatBox"></div>
+    <div class="typing-indicator" id="typingIndicator">罗罗回复中</div>
+    <div class="input-area">
+      <input type="text" id="userInput" placeholder="给罗罗发消息..." />
+      <button onclick="sendMessage()">发送</button>
+    </div>
+  </div>
+
+  <button id="saveChat">保存聊天记录</button>
+
+  <div class="avatars">
+    <div class="avatar-with-status">
+      <div class="status-bubble" id="statusBubble">在身边</div>
+      <img src="avatar_me.jpg" id="myAvatar" alt="我cc" />
+    </div>
+    <img src="avatar_him.jpg" id="hisAvatar" alt="cc的rr罗夏罗斯切尔德" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
